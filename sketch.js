@@ -46,12 +46,12 @@ function draw() {
     if (building) {
       stats.text = data[dataIndex].year;
 
-      if (counterW < data[dataIndex].women) {
-        leftGrid.addBlock();
+      if (counterW < data[dataIndex].women.length) {
+        leftGrid.addBlock(data[dataIndex].women[counterW]);
         counterW++;
       }
-      if (counterM < data[dataIndex].men) {
-        rightGrid.addBlock();
+      if (counterM < data[dataIndex].men.length) {
+        rightGrid.addBlock(data[dataIndex].men[counterM]);
         counterM++;
       }
     }

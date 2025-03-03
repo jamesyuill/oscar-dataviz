@@ -7,8 +7,10 @@ class Grid {
     this.startY = container.length + container.y - 10;
   }
 
-  addBlock() {
-    this.blockArray.push(new Block(this.startX, this.startY, 'yellow'));
+  addBlock(person) {
+    let color = person.winner ? 'red' : 'yellow';
+
+    this.blockArray.push(new Block(this.startX, this.startY, color));
     this.startX += 10;
     if (this.startX >= this.width) {
       this.startY -= 10;
